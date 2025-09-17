@@ -37,7 +37,7 @@ transaction.add(instruction);
 const signature = await web3.sendAndConfirmTransaction(
     connection,
     transaction,
-    payer
+    [payer,]
 );
 
 console.log(`✅ Transaction completed! Signature is ${signature}`);
