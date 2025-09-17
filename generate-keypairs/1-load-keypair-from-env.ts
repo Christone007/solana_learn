@@ -1,0 +1,9 @@
+import "dotenv/config";
+import { getKeypairFromEnvironment } from "@solana-developers/helpers";
+
+const keypair = getKeypairFromEnvironment("SECRET_KEY");
+
+console.log(`Keypairs loaded securely from .env file`);
+console.log(keypair.publicKey.toBase58());
+
+
